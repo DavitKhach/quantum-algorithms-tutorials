@@ -12,6 +12,7 @@ P.S. If you will find errors in the codes or in the text (grammer, math) please 
 (c) Davit Khachatryan
 
 contacts [linkedin](https://www.linkedin.com/in/davit-khachatryan-b07383174/) [twitter](https://twitter.com/davit_khach)  [facebook](https://www.facebook.com/davit.khachatryan.773)
+
 email: davit.n.khachatryan@gmail.com
 
 
