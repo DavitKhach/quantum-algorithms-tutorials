@@ -7,9 +7,9 @@ The goal of this repository to share knowledge about quantum algorithms via jupy
 
 * ...
 
-P.S. If you will find errors in the codes or in the text (grammer, math) please let me know.
-
 &nbsp;
+
+P.S. If you will find errors in the codes or in the text (grammer, math) please let me know.
 
 (c) Davit Khachatryan
 
