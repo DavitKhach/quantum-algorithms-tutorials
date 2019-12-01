@@ -8,3 +8,6 @@ The goal of this repository to share knowledge about quantum algorithms via jupy
 
 3) [Quantum Approximate Optimization Algorithm (QAOA)]
 
+Some Markdown text with <span style="color:blue">some *blue* text</span>.
+
+
