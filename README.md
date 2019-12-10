@@ -5,6 +5,10 @@ The goal of this repository to share knowledge about quantum algorithms via jupy
 
 * *Variational quantum eigensolver (VQE)* (next)
 
+* *Phase estimation algorithm (PEA)* (planed)
+* *HHL algorithm* (planed)
+* *Simon's algorithm* (planed)
+* *Shor's quantum factoring algorithm* (planed)
 * ...
 
 &nbsp;
