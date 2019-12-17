@@ -1,7 +1,3 @@
-<h1 align="center">
-	Tutorials for Quantum Algorithms
-</h1>
-
 <p align="center">
 <img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="400">
 </p>
