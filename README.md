@@ -1,5 +1,9 @@
+<h1 align="center">
+	Tutorials for Quantum Algorithms
+</h1>
+
 <p align="center">
-<img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="400">
+<img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="300">
 </p>
 
 This is a collection of tutorials for quantum algorithms. 
