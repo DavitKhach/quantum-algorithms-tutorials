@@ -1,6 +1,8 @@
 # Tutorials for Quantum Algorithms
 
-<img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="250" align="middle"/>
+<p align="center">
+<img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="250">
+</p>
 
 This is a collection of tutorials for quantum algorithms. 
 Here is the list of the tutorials (existing and planned).
