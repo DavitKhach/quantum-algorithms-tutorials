@@ -1,5 +1,9 @@
 # Tutorials for Quantum Algorithms
-The goal of this repository to share knowledge about quantum algorithms via jupyter notebook tutorials. Here are the tutorials that exist in this repository (only one yet) and planed tutorials (italic). 
+
+<img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="300"/>
+
+This is a collection of tutorials for quantum algorithms. 
+Here is the list of the tutorials (existing and planned).
 
 * [Iterative phase estimation algorithm (IPEA)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/iterative_phase_estimation.ipynb)
 
