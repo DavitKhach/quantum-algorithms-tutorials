@@ -1,4 +1,6 @@
+<p align="center">
 # Tutorials for Quantum Algorithms
+</p>
 
 <p align="center">
 <img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="250">
