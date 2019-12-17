@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-<img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="250">
+<img src="images/quantum_algorithms_tutorials.png" alt="drawing" width="400">
 </p>
 
 This is a collection of tutorials for quantum algorithms. 
