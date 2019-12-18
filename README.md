@@ -19,6 +19,11 @@ Here is the list of the tutorials (existing and planned).
 * *Shor's quantum factoring algorithm* (planed)
 * ...
 
+For working with the jupyter notebook tutorials the following packages are required:
+
+* [qiskit](https://qiskit.org/documentation/):  an open-source framework for working with quantum computers.
+* [jupyter notebook](https://jupyter.org/install): a tool for interactive computing.
+
 &nbsp;
 
 P.S. If you will find errors in the codes or in the text (grammar, math) please let me know.
