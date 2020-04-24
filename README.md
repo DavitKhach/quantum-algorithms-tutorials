@@ -9,7 +9,7 @@
 This is a collection of tutorials for quantum algorithms. 
 Here is the list of the tutorials (existing and planned).
 
-* [Quantum parallelism and Deutsch–Jozsa algorithm](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/quantum_parallelism_Deutsch_Jozsa.ipynb) *
+* [Quantum parallelism and Deutsch–Jozsa algorithm](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/quantum_parallelism_Deutsch_Jozsa.ipynb)
 
 * [Iterative quantum phase estimation algorithm (IQPE or IPEA)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/iterative_quantum_phase_estimation.ipynb)
 
