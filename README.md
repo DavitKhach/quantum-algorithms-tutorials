@@ -15,6 +15,8 @@ Here is the list of the tutorials (existing and planned).
 
 * [Quantum phase estimation algorithm (QPE or PEA)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/quantum_phase_estimation.ipynb)
 
+* [Hamiltonian simulation](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/Hamiltonian_simulation.ipynb)
+
 * [Variational quantum eigensolver (VQE)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)
 
 * *HHL algorithm* (next)
@@ -22,7 +24,16 @@ Here is the list of the tutorials (existing and planned).
 * *Shor's quantum factoring algorithm* (planed)
 * ...
 
-For working with the jupyter notebook tutorials the following packages are required:
+There are two recomended ways to use this tutorials:
+
+1) In each jupyter notebook tutorial that can be accessed
+from the GitHub there is a link to the *nbviewer* 
+(e.g. [**Open with the *nbviewer*.**](https://nbviewer.jupyter.org/github/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)) 
+that will open the tutorial in a more readable format than in GitHub.
+ 
+2) To download the repository an open the jupyter notebook 
+tutorials with a browser locally. For that one will need to
+install the following packages:
 
 * [qiskit](https://qiskit.org/documentation/):  an open-source framework for working with quantum computers.
 * [jupyter notebook](https://jupyter.org/install): a tool for interactive computing.
