@@ -28,8 +28,9 @@ There are two recomended ways to use this tutorials:
 
 1) In each jupyter notebook tutorial that can be accessed
 from the GitHub there is a link to the *nbviewer* 
-(e.g. [**Open with the *nbviewer*.**](https://nbviewer.jupyter.org/github/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)) 
-that will open the tutorial in a more readable format than in GitHub.
+(e.g. **[[Open with the nbviewer](https://nbviewer.jupyter.org/github/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)]** 
+that will open the tutorial in a more readable format than 
+it is here in GitHub.
  
 2) To download the repository an open the jupyter notebook 
 tutorials with a browser locally. For that one will need to
