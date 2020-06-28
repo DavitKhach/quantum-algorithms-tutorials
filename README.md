@@ -11,15 +11,15 @@ Here is the list of the tutorials (existing and planned).
 
 * [Quantum parallelism and Deutsch–Jozsa algorithm](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/quantum_parallelism_Deutsch_Jozsa.ipynb)
 
-* [Iterative quantum phase estimation algorithm (IQPE or IPEA)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/iterative_quantum_phase_estimation.ipynb)
+* [Iterative quantum phase estimation algorithm (IQPE)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/iterative_quantum_phase_estimation.ipynb)
 
-* [Quantum phase estimation algorithm (QPE or PEA)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/quantum_phase_estimation.ipynb)
+* [Quantum phase estimation algorithm (QPE)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/quantum_phase_estimation.ipynb)
 
 * [Hamiltonian simulation](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/Hamiltonian_simulation.ipynb)
 
 * [Variational quantum eigensolver (VQE)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)
 
-* *Quantum state tomography* (planed)
+* *Quantum state tomography* (next)
 * *Adiabatic state preparation* (planed)
 * *HHL algorithm* (planed)
 * *Simon's algorithm* (planed)
