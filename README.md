@@ -19,15 +19,17 @@ Here is the list of the tutorials (existing and planned).
 
 * [Variational quantum eigensolver (VQE)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)
 
-* *HHL algorithm* (next)
+* *Quantum state tomography* (planed)
+* *Adiabatic state preparation* (planed)
+* *HHL algorithm* (planed)
 * *Simon's algorithm* (planed)
 * *Shor's quantum factoring algorithm* (planed)
 * ...
 
 There are two recomended ways to use this tutorials:
 
-1) In each jupyter notebook tutorial that can be accessed
-from the GitHub there is a link to the *nbviewer* 
+1) In each Jupyter Notebook tutorial that can be accessed
+from the GitHub one can find a link to the *nbviewer* 
 (e.g. **[[Open with the nbviewer](https://nbviewer.jupyter.org/github/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)]** 
 that will open the tutorial in a more readable format than 
 it is here in GitHub.
@@ -36,8 +38,8 @@ it is here in GitHub.
 tutorials with a browser locally. For that one will need to
 install the following packages:
 
-* [qiskit](https://qiskit.org/documentation/):  an open-source framework for working with quantum computers.
-* [jupyter notebook](https://jupyter.org/install): a tool for interactive computing.
+* [Qiskit](https://qiskit.org/documentation/):  an open-source framework for working with quantum computers.
+* [Jupyter Notebook](https://jupyter.org/install): a tool for interactive computing.
 
 &nbsp;
 
@@ -45,7 +47,7 @@ P.S. If you will find errors in the codes or in the text (grammar, math) please 
 
 (c) Davit Khachatryan
 
-contacts [linkedin](https://www.linkedin.com/in/davit-khachatryan-b07383174/) ;
+contacts [linkedin](https://www.linkedin.com/in/davit-khachatryan-b07383174/) :
 [twitter](https://twitter.com/davit_khach)  
 
 email: davit.n.khachatryan@gmail.com
