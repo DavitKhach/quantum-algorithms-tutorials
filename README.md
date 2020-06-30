@@ -30,12 +30,13 @@ There are two recomended ways to use this tutorials:
 
 1) In each Jupyter Notebook tutorial that can be accessed
 from the GitHub one can find a link to the *nbviewer* 
-(e.g. **[[Open with the nbviewer](https://nbviewer.jupyter.org/github/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)]** 
+(e.g. **[[Open with the nbviewer](https://nbviewer.jupyter.org/github/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)]**) 
 that will open the tutorial in a more readable format than 
-it is here in GitHub.
+it is here in the GitHub.
  
-2) To download the repository an open the jupyter notebook 
-tutorials with a browser locally. For that one will need to
+2) To download the repository and open the Jupyter Notebook 
+tutorials with a browser locally. This also will allow to
+run the code from the tutorials. For that one will need to
 install the following packages:
 
 * [Qiskit](https://qiskit.org/documentation/):  an open-source framework for working with quantum computers.
