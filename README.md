@@ -9,6 +9,8 @@
 This is a collection of tutorials for quantum algorithms. 
 Here is the list of the tutorials (existing and planned).
 
+* [Estimation of the Bloch sphere angles](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/bloch_angles_estimation.ipynb)
+
 * [Quantum parallelism and Deutsch–Jozsa algorithm](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/quantum_parallelism_Deutsch_Jozsa.ipynb)
 
 * [Iterative quantum phase estimation algorithm (IQPE)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/iterative_quantum_phase_estimation.ipynb)
