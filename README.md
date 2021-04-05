@@ -21,11 +21,6 @@ Here is the list of the tutorials (existing and planned).
 
 * [Variational quantum eigensolver (VQE)](https://github.com/DavitKhach/quantum-algorithms-tutorials/blob/master/variational_quantum_eigensolver.ipynb)
 
-* *Quantum state tomography* (next)
-* *Adiabatic state preparation* (planed)
-* *HHL algorithm* (planed)
-* *Simon's algorithm* (planed)
-* *Shor's quantum factoring algorithm* (planed)
 * ...
 
 There are two recomended ways to use this tutorials:
