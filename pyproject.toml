@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "quantum_algorithms"
+version = "1.0"
+dependencies = ["qiskit==1.0.0b1"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pytest",
+    "jupyterlab",
+    "matplotlib",
+    "jupytext"
+]
