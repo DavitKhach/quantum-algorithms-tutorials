@@ -130,7 +130,6 @@
 from qiskit import *
 import numpy as np
 from random import random
-import warnings
 
 
 # %% [markdown]
@@ -245,7 +244,7 @@ def one_qubit_pauli_expectation_value(qubit, circuit, backend,
     for qreg in circuit.qregs:
         circuit_expectation.add_register(qreg)
 
-    circuit_expectation += circuit
+    circuit_expectation.compose(circuit, inplace=True)
 
     if pauli_operator == 'x' or pauli_operator == 'X':
         circuit_expectation.h(qubit)
@@ -308,10 +307,10 @@ def estimate_bloch_angles(qubit, circuit, backend, shots):
     purity = (1 + x_expectation_value ** 2 + \
               y_expectation_value ** 2 + z_expectation_value ** 2) / 2
     if not np.isclose(purity, 1, rtol=0, atol=1e-1):
-        warnings.warn(f"For not pure one qubit states Bloch "
-                      f"angles are not defined. The purity is "
-                      f"equal to {purity}. The resulted "
-                      f"estimations are not valid.")
+        print(f"For not pure one qubit states Bloch "
+              f"angles are not defined. The purity is "
+              f"equal to {purity}. The resulted "
+              f"estimations are not valid.")
 
     theta = 2 * np.arccos(np.sqrt((1 + z_expectation_value) / 2))
     # |0> or |1> state cases
@@ -488,7 +487,7 @@ def one_qubit_state_swap_test(qubit_1, qubit_2, auxiliary_qubit, circuit, backen
     for qreg in circuit.qregs:
         swap_circuit.add_register(qreg)
 
-    swap_circuit += circuit
+    swap_circuit.compose(circuit, inplace=True)
 
     # the main part
     swap_circuit.h(auxiliary_qubit)
