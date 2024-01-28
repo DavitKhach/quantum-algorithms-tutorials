@@ -218,7 +218,7 @@ def z_expectation_from_counts(counts, index, shots):
 # [7]: https://nbviewer.jupyter.org/github/DavitKhach/quantum-algorithms-tutorials/blob/master/bloch_angles_estimation.ipynb
 
 # %%
-def one_qubit_pauli_expectation_value(qubit, circuit, backend, 
+def one_qubit_pauli_expectation_value(qubit, circuit, backend,
                                       shots, pauli_operator):
     """
     Expectation value of X or Y or Z operators
@@ -234,17 +234,17 @@ def one_qubit_pauli_expectation_value(qubit, circuit, backend,
     :return:        the expectation value
     """
     if len(circuit.cregs) != 0:
-        raise NotImplementedError("The circuit should not have" 
-                                  "classical registers, because" 
+        raise NotImplementedError("The circuit should not have"
+                                  "classical registers, because"
                                   "that case is not implemented.")
 
     classical_register = ClassicalRegister(1)
     circuit_expectation = QuantumCircuit(classical_register)
-    
+
     # add the qregs of the circuit to the circuit_expectation
     for qreg in circuit.qregs:
         circuit_expectation.add_register(qreg)
-    
+
     circuit_expectation += circuit
 
     if pauli_operator == 'x' or pauli_operator == 'X':
@@ -253,12 +253,12 @@ def one_qubit_pauli_expectation_value(qubit, circuit, backend,
         circuit_expectation.u(np.pi / 2, np.pi / 2, np.pi / 2, qubit)  # H_y = UGate(np.pi / 2, np.pi / 2, np.pi / 2)
     elif pauli_operator != 'z' and pauli_operator != 'Z':
         # nothing should be done for the <z> case
-        raise ValueError(f"Pauli operator should be equal" 
-                         f"'x', 'y','z' or 'X', 'Y','Z'." 
+        raise ValueError(f"Pauli operator should be equal"
+                         f"'x', 'y','z' or 'X', 'Y','Z'."
                          f"It was given {pauli_operator}")
 
     circuit_expectation.measure(qubit, classical_register[0])
-    counts = execute(circuit_expectation, 
+    counts = execute(circuit_expectation,
                      backend, shots=shots).result().get_counts()
 
     return z_expectation_from_counts(counts, 0, shots)
@@ -297,16 +297,16 @@ def estimate_bloch_angles(qubit, circuit, backend, shots):
     :return:        (theta, phi) tuple
     """
 
-    x_expectation_value = one_qubit_pauli_expectation_value(qubit, 
-                           circuit, backend, shots, "X")
-    y_expectation_value = one_qubit_pauli_expectation_value(qubit, 
-                           circuit, backend, shots, "Y")
-    z_expectation_value = one_qubit_pauli_expectation_value(qubit, 
-                           circuit, backend, shots, "Z")
+    x_expectation_value = one_qubit_pauli_expectation_value(qubit,
+                                                            circuit, backend, shots, "X")
+    y_expectation_value = one_qubit_pauli_expectation_value(qubit,
+                                                            circuit, backend, shots, "Y")
+    z_expectation_value = one_qubit_pauli_expectation_value(qubit,
+                                                            circuit, backend, shots, "Z")
 
     # check if it is a pure state
-    purity = (1 + x_expectation_value**2 + \
-              y_expectation_value**2 + z_expectation_value**2) / 2
+    purity = (1 + x_expectation_value ** 2 + \
+              y_expectation_value ** 2 + z_expectation_value ** 2) / 2
     if not np.isclose(purity, 1, rtol=0, atol=1e-1):
         warnings.warn(f"For not pure one qubit states Bloch "
                       f"angles are not defined. The purity is "
@@ -316,11 +316,10 @@ def estimate_bloch_angles(qubit, circuit, backend, shots):
     theta = 2 * np.arccos(np.sqrt((1 + z_expectation_value) / 2))
     # |0> or |1> state cases
     if np.isclose(theta, 0, rtol=0, atol=1e-2) or \
-       np.isclose(theta, np.pi / 2, rtol=0, atol=1e-2):
-        
+            np.isclose(theta, np.pi / 2, rtol=0, atol=1e-2):
         phi = 0
         return theta, phi
-    
+
     # arccos_argument should be in [-1, 1]
     arccos_argument = x_expectation_value / np.sin(theta)
     if np.isclose(arccos_argument, 1, rtol=0, atol=1e-2):
@@ -331,7 +330,7 @@ def estimate_bloch_angles(qubit, circuit, backend, shots):
         raise ValueError("Value error for arccos, try to "
                          "increase the shots in order to "
                          "improve estimation.")
-    
+
     if (y_expectation_value / np.sin(theta)) > 0:  # = sin(phi) > 0
         phi = np.arccos(arccos_argument)
     elif (y_expectation_value / np.sin(theta)) < 0:  # = sin(phi) < 0
@@ -362,10 +361,10 @@ bloch_phi = 2 * np.pi * random()
 qubit = QuantumRegister(1)
 circuit_one_qubit = QuantumCircuit(qubit)
 
-circuit_one_qubit.u(bloch_theta, bloch_phi, 0, qubit[0]) # creates cos(theta/2)|0> + e^{i phi}sin(theta/2)|1>
+circuit_one_qubit.u(bloch_theta, bloch_phi, 0, qubit[0])  # creates cos(theta/2)|0> + e^{i phi}sin(theta/2)|1>
 
-estimated_theta, estimated_phi = estimate_bloch_angles(qubit[0], 
-                                  circuit_one_qubit, backend, shots)
+estimated_theta, estimated_phi = estimate_bloch_angles(qubit[0],
+                                                       circuit_one_qubit, backend, shots)
 
 print("theta = ", bloch_theta)
 print("The estimated theta = ", estimated_theta)
@@ -387,8 +386,8 @@ circuit_bell = QuantumCircuit(quantum_register)
 circuit_bell.h(quantum_register[0])
 circuit_bell.cx(quantum_register[0], quantum_register[1])
 
-estimated_theta, estimated_phi = estimate_bloch_angles(quantum_register[0], 
-                                  circuit_bell, backend, shots=8192)
+estimated_theta, estimated_phi = estimate_bloch_angles(quantum_register[0],
+                                                       circuit_bell, backend, shots=8192)
 
 print("The estimated theta = ", estimated_theta)
 print("The estimated phi = ", estimated_phi)
@@ -490,14 +489,14 @@ def one_qubit_state_swap_test(qubit_1, qubit_2, auxiliary_qubit, circuit, backen
         swap_circuit.add_register(qreg)
 
     swap_circuit += circuit
-    
+
     # the main part
     swap_circuit.h(auxiliary_qubit)
     swap_circuit.cswap(auxiliary_qubit, qubit_1, qubit_2)
     swap_circuit.h(auxiliary_qubit)
     swap_circuit.measure(auxiliary_qubit, classical_register[0])
 
-    counts = execute(swap_circuit, 
+    counts = execute(swap_circuit,
                      backend, shots=shots).result().get_counts()
 
     return z_expectation_from_counts(counts, 0, shots)
@@ -513,26 +512,26 @@ main_qubit = QuantumRegister(1)
 test_qubit = QuantumRegister(1)
 auxiliary_qubit = QuantumRegister(1)
 circuit_random_gates = QuantumCircuit(main_qubit,
-                        test_qubit, auxiliary_qubit)
+                                      test_qubit, auxiliary_qubit)
 
 for _ in range(random_gate_number):
-    (param1, param2, param3) = (2 * np.pi * random(), 
-                                2 * np.pi * random(), 
+    (param1, param2, param3) = (2 * np.pi * random(),
+                                2 * np.pi * random(),
                                 2 * np.pi * random())
     circuit_random_gates.u(param1, param2, param3, main_qubit)
 
-estimated_theta, estimated_phi = estimate_bloch_angles(main_qubit[0], 
-                                  circuit_random_gates, backend, shots)
+estimated_theta, estimated_phi = estimate_bloch_angles(main_qubit[0],
+                                                       circuit_random_gates, backend, shots)
 
 # recreate the state
-circuit_random_gates.u(estimated_theta, estimated_phi, 0, 
-                         test_qubit[0])
-swap_test_output = one_qubit_state_swap_test(main_qubit[0], 
-                         test_qubit[0], auxiliary_qubit[0],
-                         circuit_random_gates, backend, shots)
+circuit_random_gates.u(estimated_theta, estimated_phi, 0,
+                       test_qubit[0])
+swap_test_output = one_qubit_state_swap_test(main_qubit[0],
+                                             test_qubit[0], auxiliary_qubit[0],
+                                             circuit_random_gates, backend, shots)
 
 if np.isclose(swap_test_output, 1, rtol=0, atol=1e-1):
-    print(f"The estimated theta and phi angles are correct. " 
+    print(f"The estimated theta and phi angles are correct. "
           f"The output of the Swap test is equal to "
           f"|<psi_in|psi_est>|^2 = {swap_test_output}")
 else:
